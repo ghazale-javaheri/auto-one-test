@@ -7,7 +7,6 @@ type returnType={
 export function getCar(
   stockNumber: string
 ): Promise<returnType> {
-  console.log(stockNumber,'kir 222');
   
   return axios
     .get<returnType>(`${ENDPOINTS.car}/${stockNumber}`)

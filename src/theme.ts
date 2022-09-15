@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+import { height } from "@mui/system";
 declare module "@mui/material/styles" {
   interface Palette {
     main: string;
@@ -51,7 +52,13 @@ export const theme = createTheme({
       styleOverrides:{
         root:({theme}) =>({
           background: theme.palette['main'],
-          color: "#ffffff"
+          color: "#ffffff",
+          ":hover":{
+            background: theme.palette['main-high-emphasis'],
+          },
+          height: "32px",
+          width: "128px"
+
         })
       }
     },

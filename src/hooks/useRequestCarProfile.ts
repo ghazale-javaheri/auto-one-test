@@ -13,7 +13,6 @@ const useRequestCarProfile = (stockNumber: string ) => {
   useEffect(() => {
     getCar(stockNumber)
       .then(result => {
-        console.log('kir 222');
         
         dispatch({ type: "SET_CAR", car: result.car});
       })

@@ -26,7 +26,7 @@ export const CarProfile = () => {
 
 
   return (
-    <>
+    <Box display="flex" flexDirection="column" minHeight={"100vh"}>
       <Box
         component="img"
         sx={{
@@ -38,7 +38,7 @@ export const CarProfile = () => {
         alt="The house from the offer."
         src={car?.pictureUrl}
       />
-      <Grid container maxWidth={800} mx={"auto"} mt={6}>
+      <Grid container maxWidth={800} mx={"auto"} mt={6} flexGrow="1">
         <Grid item xs={7} px={3}>
           <Box
             maxWidth={"800px"}
@@ -100,7 +100,6 @@ export const CarProfile = () => {
                 <Button
                   onClick={() => setMarked(String(stockNumber))}
                   sx={{ ml: "auto" }}
-                  size="small"
                 >
                   <BookmarkBorderIcon sx={{width:24}} />
                   save
@@ -110,6 +109,6 @@ export const CarProfile = () => {
           </Card>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };

@@ -15,22 +15,12 @@ import { routes } from "config";
 
 export const MediaCarCard: React.FC<Car> = ({
   color,
-  manufacturerName,
   mileage,
   fuelType,
   pictureUrl,
   stockNumber,
   modelName,
 }) => {
-  console.log(
-    color,
-    manufacturerName,
-    mileage,
-    fuelType,
-    pictureUrl,
-    stockNumber,
-    modelName
-  );
   const { marked } = useGetMarked();
 
   return (

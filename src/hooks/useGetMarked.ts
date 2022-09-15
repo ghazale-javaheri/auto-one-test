@@ -13,14 +13,11 @@ function useGetMarked() {
     },[marked])
 
     const setMarkeDown=(stockNumber:string,remove=false)=>{
-        console.log([...marked, stockNumber], remove,'dddd');
         
         if(!remove){
-            console.log('!remove');
             
             setMarked([...marked, stockNumber])
             }else{
-                console.log('remove');
                 
             setMarked(marked.filter(item => item!== stockNumber))
             }
